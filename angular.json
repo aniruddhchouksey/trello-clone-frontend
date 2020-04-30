@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "trello-clone-frontend"
+    }
+  },
+  "defaultProject": "trello-clone-frontend",
+  "cli": {
+    "analytics": false
+  }
 }
