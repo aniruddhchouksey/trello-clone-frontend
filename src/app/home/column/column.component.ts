@@ -10,17 +10,21 @@ import { Column } from './column';
 export class ColumnComponent implements OnInit {
 
   @Input() columns: Column[];
-  private cards: Card[];
-  private card: Card;
+  // private cards: Card[];
+  // private card: Card;
   hoverText: boolean = false;
 
   constructor() { }
-  ngOnInit(){ }
+  ngOnInit() {
+    // this.columns.forEach(element => {
+    //   console.log(element);
+    // });
+  }
 
-  hoverTextIn(){
+  hoverTextIn() {
     this.hoverText = true;
   }
-  hoverTextOut(){
+  hoverTextOut() {
     this.hoverText = false;
   }
 
