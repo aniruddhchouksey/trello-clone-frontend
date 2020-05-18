@@ -1,7 +1,10 @@
-export interface Card{
-  id: string;
+export interface Card {
+  _id: string;
   name: string;
   description: string;
-  attachmentNumber: number;
-  comments: number;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+  // attachmentNumber: number;
+  // comments: number;
 }

@@ -1,27 +1,34 @@
 <div class="column-container">
 
-  <div class="mt-2 ml-2" style="width: 272px;" *ngFor="let colum of columns">
+  <div class="mt-2 ml-2" style="width: 272px;" *ngFor="let column of columns">
 
-      <div class="card shadow-sm" style=" background-color:'#ebecf0';">
-        <div class="ml-4 mt-2 ">
-          <p><strong>{{colum.title}}</strong></p>
+    <div class="card shadow-sm" style=" background-color:'#ebecf0';">
+      <div class="ml-4 mt-2 ">
+        <!-- <p><strong>{{colum.title}}</strong></p> -->
+      </div>
+      <div class="card-body">
+
+        <div *ngIf="column">
+          <h4>hello {{column.cards}}</h4>
         </div>
-      <div class="card-body" >
-        <div *ngFor="let card of colum.cards">
-      <app-card [card] = 'card'></app-card>
-    </div>
-    <div class="d-flex">
-    <div class="add-card m-2 p-1">
-      <span class="material-icons is-16 align-middle ">add</span><span class="align-middle">Add Another Card</span>
-    </div>
-    <span (mouseenter)="hoverTextIn()" (mouseleave)="hoverTextOut()" class="card-from-template material-icons is-15 ml-auto m-2 p-2" >collections_bookmark</span>
-  </div>
 
-  </div>
-  </div>
-  <div>
-    <span *ngIf="hoverText"><small>Create from template...</small></span>
-  </div>
+        <div *ngFor="let card of column.cards">
+          <app-card [card]='card'></app-card>
+        </div>
+        <div class="d-flex">
+          <div class="add-card m-2 p-1">
+            <span class="material-icons is-16 align-middle ">add</span><span class="align-middle">Add Another
+              Card</span>
+          </div>
+          <span (mouseenter)="hoverTextIn()" (mouseleave)="hoverTextOut()"
+            class="card-from-template material-icons is-15 ml-auto m-2 p-2">collections_bookmark</span>
+        </div>
+
+      </div>
+    </div>
+    <div>
+      <span *ngIf="hoverText"><small>Create from template...</small></span>
+    </div>
   </div>
 
 
