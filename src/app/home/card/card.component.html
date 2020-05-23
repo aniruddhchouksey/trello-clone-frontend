@@ -1,0 +1,25 @@
+<div class="card m-2 shadow-sm">
+  <div class="card-body p-2">
+    <h6> some {{card.name}}</h6>
+    <div class="d-flex align-middle">
+
+      <div *ngIf="card.description" class="pl-1 pt-2">
+        <span class="material-icons is-15">description</span>
+      </div>
+
+      <!-- <div *ngIf="card.attachmentNumber" class="pl-2 pt-2">
+        <span class="material-icons is-15" style="transform: rotate(45deg);">attach_file
+        </span><small class="align-top">{{card.attachmentNumber}}</small>
+      </div>
+
+      <div *ngIf="card.comments" class="pl-2 pt-2">
+        <span class="material-icons is-15 p-1">comment</span>
+        <span>
+          <small class="align-top">{{card.comments}}</small>
+        </span> -->
+
+      <!-- </div> -->
+    </div>
+
+  </div>
+</div>
